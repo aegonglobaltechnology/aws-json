@@ -1,0 +1,35 @@
+{
+  "family": "jenkins-master",
+  "volumes": [
+    {
+      "name": "jenkins-vol",
+      "host": {}
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "environment": [],
+      "name": "jenkins-master",
+      "image": "aegon/jenkins",
+      "cpu": 10,
+      "memory": 500,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 80
+        },
+        {
+          "containerPort": 50000,
+          "hostPort": 50000
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "jenkins-vol",
+          "containerPath": "/var/jenkins_home"
+        }
+      ],
+      "essential": true
+    }
+  ]
+}
