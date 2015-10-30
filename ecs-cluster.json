@@ -67,7 +67,7 @@
     "EcsClusterName" : {
       "Type" : "String",
       "Description" : "ECS Cluster Name",
-      "Default" : "default"
+      "Default" : "CloudBrokering"
     },
 
     "EcsPort" : {
